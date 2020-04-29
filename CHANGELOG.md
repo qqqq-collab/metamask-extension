@@ -1,8 +1,59 @@
 # Changelog
 
 ## Current Develop Branch
+- [#7004](https://github.com/MetaMask/metamask-extension/pull/7004): Connect distinct accounts per site
+- [#7261](https://github.com/MetaMask/metamask-extension/pull/7261): Search accounts by name
+- [#7483](https://github.com/MetaMask/metamask-extension/pull/7483): transactions/pending - buffer 3 blocks before dropping a tx
+- [#7620](https://github.com/MetaMask/metamask-extension/pull/7620): Handle one specific permissions request per tab
+- [#7476](https://github.com/MetaMask/metamask-extension/pull/7476): React 16 upgrade
+- [#7686](https://github.com/MetaMask/metamask-extension/pull/7686): Add description to Reset Account in settings
+- [#7362](https://github.com/MetaMask/metamask-extension/pull/7362): Ipfs cid v1 base32
+- [#7696](https://github.com/MetaMask/metamask-extension/pull/7696): Adjust colour of Reset Account btn to reflect danger
+- [#7602](https://github.com/MetaMask/metamask-extension/pull/7602): Login per site onboarding
+- [#7672](https://github.com/MetaMask/metamask-extension/pull/7672): Custom token symbols must be 11 characters or fewer
+- [#7747](https://github.com/MetaMask/metamask-extension/pull/7747): Properly handle <enter> keystroke
+- [#7810](https://github.com/MetaMask/metamask-extension/pull/7810): Remove padding of info circle of advanced gas
+- [#7818](https://github.com/MetaMask/metamask-extension/pull/7818): Remove MetaMask Mesh testing client
+- [#7840](https://github.com/MetaMask/metamask-extension/pull/7840): Force background state update after removing an account
+- [#7853](https://github.com/MetaMask/metamask-extension/pull/7853): Change "Log In/Out" terminology to "Unlock/Lock"
+- [#7863](https://github.com/MetaMask/metamask-extension/pull/7863): Add mechanism to randomize seed phrase filename
+- [#7933](https://github.com/MetaMask/metamask-extension/pull/7933): Sorting seed phrase confirmation buttons alphabetically
+- [#7987](https://github.com/MetaMask/metamask-extension/pull/7987): Add support for 24 word seed phrases
+- [#7971](https://github.com/MetaMask/metamask-extension/pull/7971): Use contact name instead of address during send flow
+- [#8050](https://github.com/MetaMask/metamask-extension/pull/8050): add title to transaction action component
+- [#7831](https://github.com/MetaMask/metamask-extension/pull/7831): Implementation encrypt/decrypt feature
+- [#8125](https://github.com/MetaMask/metamask-extension/pull/8125): Add setting for disabling Eth Phishing Detection
+- [#8148](https://github.com/MetaMask/metamask-extension/pull/8148): Prevent external domains from submitting more than one perm request at a time
+- [#8079](https://github.com/MetaMask/metamask-extension/pull/8079): LoginPerSite: Support multiple accounts without automatic switching
+- [#8149](https://github.com/MetaMask/metamask-extension/pull/8149): Wait for extension unlock before processing eth_requestAccounts
+- [#8201](https://github.com/MetaMask/metamask-extension/pull/8201): Add Idle Timeout for Sync with mobile
+- [#8247](https://github.com/MetaMask/metamask-extension/pull/8247): Update Italian translation
+- [#8246](https://github.com/MetaMask/metamask-extension/pull/8246): Make seed phrase import case-insensitive
+- [#8254](https://github.com/MetaMask/metamask-extension/pull/8254): Convert Connected Sites page to modal
+- [#8259](https://github.com/MetaMask/metamask-extension/pull/8259): Update token cell to show inline stale balance warning
+- [#8262](https://github.com/MetaMask/metamask-extension/pull/8262): Update Connected Sites modal design
+- [#8264](https://github.com/MetaMask/metamask-extension/pull/8264): Move asset list to home tab on small screens
+- [#8270](https://github.com/MetaMask/metamask-extension/pull/8270): Connected status indicator
+- [#8078](https://github.com/MetaMask/metamask-extension/pull/8078): Connect Screen Multi Select
+- [#8181](https://github.com/MetaMask/metamask-extension/pull/8181): Connect screen multi accounts tooltip
+- [#8269](https://github.com/MetaMask/metamask-extension/pull/8269): Connect flow via popup
+- [#8318](https://github.com/MetaMask/metamask-extension/pull/8318): Focus the notification popup if it's already open
+- [#8356](https://github.com/MetaMask/metamask-extension/pull/8356): Position notification relative to last focused window
+- [#8358](https://github.com/MetaMask/metamask-extension/pull/8358): Close notification UI if no unapproved confirmations
+- [#8293](https://github.com/MetaMask/metamask-extension/pull/8293): Connected indicator info popup
+- [#8435](https://github.com/MetaMask/metamask-extension/pull/8435): Correctly detect changes to background state
+- [#8442](https://github.com/MetaMask/metamask-extension/pull/8442): Add new inpage provider package
 - [#7912](https://github.com/MetaMask/metamask-extension/pull/7912): Disable import button for empty string/file
 - [#8246](https://github.com/MetaMask/metamask-extension/pull/8246): Make seed phrase import case-insensitive
+- [#8312](https://github.com/MetaMask/metamask-extension/pull/8312): Alert user upon switching to unconnected account
+- [#8445](https://github.com/MetaMask/metamask-extension/pull/8445): Don't updatePendingTxs outside of block updates
+- [#8428](https://github.com/MetaMask/metamask-extension/pull/8428): Convert connected-status-indicator to button
+- [#8467](https://github.com/MetaMask/metamask-extension/pull/8467): fixes firefox popup location
+- [#8486](https://github.com/MetaMask/metamask-extension/pull/8486): Ensure tx has value before it's added
+- [#8490](https://github.com/MetaMask/metamask-extension/pull/8490): Fix default gas race condition
+- [#8491](https://github.com/MetaMask/metamask-extension/pull/8491): Update tokens after importing account
+- [#8496](https://github.com/MetaMask/metamask-extension/pull/8496): Enable disconnecting a single or all accounts
+- [#8433](https://github.com/MetaMask/metamask-extension/pull/8433): Fix connection modal style issues
 
 ## 7.7.0 Thu Nov 28 2019
 - [#7004](https://github.com/MetaMask/metamask-extension/pull/7004): Connect distinct accounts per site
