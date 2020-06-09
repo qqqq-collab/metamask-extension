@@ -1,8 +1,19 @@
-.preloader__icon {
-  animation-name: spin;
-  animation-duration: 500ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.preloader {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &__label {
+    font-size: 10px;
+    margin-left: 4px;
+    color: $Grey-500;
+  }
 }
 
 @keyframes spin {

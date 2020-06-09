@@ -22,6 +22,7 @@ import {
 import { useShouldShowSpeedUp } from '../../../hooks/useShouldShowSpeedUp'
 import TransactionStatus from '../transaction-status/transaction-status.component'
 import TransactionIcon from '../transaction-icon'
+import { useTransactionTimeRemaining } from '../../../hooks/useTransactionTimeRemaining'
 
 
 export default function TransactionListItem ({ transactionGroup, isEarliestNonce = false }) {
@@ -30,8 +31,7 @@ export default function TransactionListItem ({ transactionGroup, isEarliestNonce
   const { hasCancelled } = transactionGroup
   const [showDetails, setShowDetails] = useState(false)
 
-  const { initialTransaction: { id }, primaryTransaction } = transactionGroup
-
+  const { initialTransaction: { id }, primaryTransaction: { err, submittedTime, gasPrice } } = transactionGroup
   const [cancelEnabled, cancelTransaction] = useCancelTransaction(transactionGroup)
   const retryTransaction = useRetryTransaction(transactionGroup)
   const shouldShowSpeedUp = useShouldShowSpeedUp(transactionGroup, isEarliestNonce)
@@ -48,6 +48,9 @@ export default function TransactionListItem ({ transactionGroup, isEarliestNonce
     isPending,
     senderAddress,
   } = useTransactionDisplayData(transactionGroup)
+
+  const timeRemaining = useTransactionTimeRemaining(isPending, isEarliestNonce, submittedTime, gasPrice)
+
 
   const isSignatureReq = category === TRANSACTION_CATEGORY_SIGNATURE_REQUEST
   const isUnapproved = status === UNAPPROVED_STATUS
@@ -115,6 +118,7 @@ export default function TransactionListItem ({ transactionGroup, isEarliestNonce
           <Preloader
             size={16}
             color="#D73A49"
+            label={timeRemaining}
           />
         )}
         icon={<TransactionIcon category={category} status={status} />}
@@ -123,7 +127,7 @@ export default function TransactionListItem ({ transactionGroup, isEarliestNonce
           <TransactionStatus
             isPending={isPending}
             isEarliestNonce={isEarliestNonce}
-            error={primaryTransaction.err}
+            error={err}
             date={date}
             status={status}
           />
